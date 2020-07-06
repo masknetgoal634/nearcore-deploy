@@ -3,7 +3,7 @@
   "protocol_version": 27,
   "genesis_time": "2020-06-27T18:00:00Z",
   "chain_id": "guildnet",
-  "genesis_height": 0,
+  "genesis_height": 984964,
   "num_block_producer_seats": 50,
   "num_block_producer_seats_per_shard": [
     50,50,50,50
