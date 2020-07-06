@@ -25,7 +25,7 @@
   "network": {
     "addr": "0.0.0.0:24567",
     "external_address": "",
-    "boot_nodes": "ed25519:388zoreQQJJvQaVNhNfKNDaGqJX1JYHfVXmSNoBQXFAF@161.35.229.231:24567, ed25519:SKqyG3fKSKBtoPysHw4KRK6Ws4zBGy3NXaRvBe5R4Yc@199.241.136.89:24567",
+    "boot_nodes": "ed25519:388zoreQQJJvQaVNhNfKNDaGqJX1JYHfVXmSNoBQXFAF@161.35.229.231:24567,ed25519:SKqyG3fKSKBtoPysHw4KRK6Ws4zBGy3NXaRvBe5R4Yc@199.241.136.89:24567",
     "max_num_peers": 40,
     "minimum_outbound_peers": 5,
     "ideal_connections_lo": 30,
