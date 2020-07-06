@@ -1,0 +1,442 @@
+{
+  "config_version": 1,
+  "protocol_version": 27,
+  "genesis_time": "2020-06-27T18:00:00Z",
+  "chain_id": "guildnet",
+  "genesis_height": 0,
+  "num_block_producer_seats": 50,
+  "num_block_producer_seats_per_shard": [
+    50,50,50,50
+  ],
+  "avg_hidden_validator_seats_per_shard": [
+    0
+  ],
+  "dynamic_resharding": false,
+  "protocol_upgrade_stake_threshold": [
+    4,
+    5
+  ],
+  "protocol_upgrade_num_epochs": 2,
+  "epoch_length": 5000,
+  "gas_limit": 1000000000000000,
+  "min_gas_price": "100000",
+  "max_gas_price": "10000000000000000000000",
+  "block_producer_kickout_threshold": 90,
+  "chunk_producer_kickout_threshold": 90,
+  "gas_price_adjustment_rate": [
+    1,
+    100
+  ],
+  "runtime_config": {
+    "storage_amount_per_byte": "100000000000000000000",
+    "transaction_costs": {
+      "action_receipt_creation_config": {
+        "send_sir": 108059500000,
+        "send_not_sir": 108059500000,
+        "execution": 108059500000
+      },
+      "data_receipt_creation_config": {
+        "base_cost": {
+          "send_sir": 4697339419375,
+          "send_not_sir": 4697339419375,
+          "execution": 4697339419375
+        },
+        "cost_per_byte": {
+          "send_sir": 59357464,
+          "send_not_sir": 59357464,
+          "execution": 59357464
+        }
+      },
+      "action_creation_config": {
+        "create_account_cost": {
+          "send_sir": 99607375000,
+          "send_not_sir": 99607375000,
+          "execution": 99607375000
+        },
+        "deploy_contract_cost": {
+          "send_sir": 184765750000,
+          "send_not_sir": 184765750000,
+          "execution": 184765750000
+        },
+        "deploy_contract_cost_per_byte": {
+          "send_sir": 6812999,
+          "send_not_sir": 6812999,
+          "execution": 6812999
+        },
+        "function_call_cost": {
+          "send_sir": 2319861500000,
+          "send_not_sir": 2319861500000,
+          "execution": 2319861500000
+        },
+        "function_call_cost_per_byte": {
+          "send_sir": 2235934,
+          "send_not_sir": 2235934,
+          "execution": 2235934
+        },
+        "transfer_cost": {
+          "send_sir": 115123062500,
+          "send_not_sir": 115123062500,
+          "execution": 115123062500
+        },
+        "stake_cost": {
+          "send_sir": 141715687500,
+          "send_not_sir": 141715687500,
+          "execution": 102217625000
+        },
+        "add_key_cost": {
+          "full_access_cost": {
+            "send_sir": 101765125000,
+            "send_not_sir": 101765125000,
+            "execution": 101765125000
+          },
+          "function_call_cost": {
+            "send_sir": 102217625000,
+            "send_not_sir": 102217625000,
+            "execution": 102217625000
+          },
+          "function_call_cost_per_byte": {
+            "send_sir": 1925331,
+            "send_not_sir": 1925331,
+            "execution": 1925331
+          }
+        },
+        "delete_key_cost": {
+          "send_sir": 94946625000,
+          "send_not_sir": 94946625000,
+          "execution": 94946625000
+        },
+        "delete_account_cost": {
+          "send_sir": 147489000000,
+          "send_not_sir": 147489000000,
+          "execution": 147489000000
+        }
+      },
+      "storage_usage_config": {
+        "num_bytes_account": 100,
+        "num_extra_bytes_record": 40
+      },
+      "burnt_gas_reward": [
+        3,
+        10
+      ],
+      "pessimistic_gas_price_inflation_ratio": [
+        103,
+        100
+      ]
+    },
+    "wasm_config": {
+      "ext_costs": {
+        "base": 265261758,
+        "read_memory_base": 2584050225,
+        "read_memory_byte": 3801396,
+        "write_memory_base": 2780731725,
+        "write_memory_byte": 2723859,
+        "read_register_base": 2493624561,
+        "read_register_byte": 98622,
+        "write_register_base": 2840975211,
+        "write_register_byte": 3801645,
+        "utf8_decoding_base": 3110963061,
+        "utf8_decoding_byte": 289342653,
+        "utf16_decoding_base": 3593689800,
+        "utf16_decoding_byte": 167519322,
+        "sha256_base": 4530046500,
+        "sha256_byte": 24116301,
+        "keccak256_base": 5867223186,
+        "keccak256_byte": 21469644,
+        "keccak512_base": 5798128650,
+        "keccak512_byte": 36651981,
+        "log_base": 2408221236,
+        "log_byte": 15863835,
+        "storage_write_base": 45187219125,
+        "storage_write_key_byte": 66445653,
+        "storage_write_value_byte": 29682120,
+        "storage_write_evicted_byte": 28939782,
+        "storage_read_base": 32029296375,
+        "storage_read_key_byte": 28463997,
+        "storage_read_value_byte": 3289884,
+        "storage_remove_base": 35876668875,
+        "storage_remove_key_byte": 35342424,
+        "storage_remove_ret_value_byte": 7303842,
+        "storage_has_key_base": 31315025250,
+        "storage_has_key_byte": 28376217,
+        "storage_iter_create_prefix_base": 0,
+        "storage_iter_create_prefix_byte": 0,
+        "storage_iter_create_range_base": 0,
+        "storage_iter_create_from_byte": 0,
+        "storage_iter_create_to_byte": 0,
+        "storage_iter_next_base": 0,
+        "storage_iter_next_key_byte": 0,
+        "storage_iter_next_value_byte": 0,
+        "touching_trie_node": 5764118571,
+        "promise_and_base": 1473816795,
+        "promise_and_per_promise": 5613432,
+        "promise_return": 558292404,
+        "validator_stake_base": 303944908800,
+        "validator_total_stake_base": 303944908800
+      },
+      "grow_mem_cost": 1,
+      "regular_op_cost": 3856371,
+      "limit_config": {
+        "max_gas_burnt": 200000000000000,
+        "max_gas_burnt_view": 200000000000000,
+        "max_stack_height": 16384,
+        "initial_memory_pages": 1024,
+        "max_memory_pages": 2048,
+        "registers_memory_limit": 1073741824,
+        "max_register_size": 104857600,
+        "max_number_registers": 100,
+        "max_number_logs": 100,
+        "max_total_log_length": 16384,
+        "max_total_prepaid_gas": 10000000000000000,
+        "max_actions_per_receipt": 100,
+        "max_number_bytes_method_names": 2000,
+        "max_length_method_name": 256,
+        "max_arguments_length": 4194304,
+        "max_length_returned_data": 4194304,
+        "max_contract_size": 4194304,
+        "max_length_storage_key": 4194304,
+        "max_length_storage_value": 4194304,
+        "max_promises_per_function_call_action": 1024,
+        "max_number_input_data_dependencies": 128
+      }
+    },
+    "account_creation_config": {
+      "min_allowed_top_level_account_length": 32,
+      "registrar_account_id": "registrar"
+    }
+  },
+  "validators": [
+    {
+      "account_id": "node0.guildnet",
+      "public_key": "ed25519:FKLR9zWTFZ7yazX74h4AqgmxDDhgr1cmaSky999keGsV",
+      "amount": "50000000011865419790795122041"
+    },
+    {
+      "account_id": "node1.guildnet",
+      "public_key": "ed25519:A1bepj5HcNtLjgsVJKctpZYktFH43JnLq9dzua1Mrkpr",
+      "amount": "50000000011875276807113550000"
+    },
+    {
+      "account_id": "node2.guildnet",
+      "public_key": "ed25519:FEELw1gBofAEZQTu9LfErqrZUPkZj7T3LaZf3cnUvJ38",
+      "amount": "50000000011874181583078169115"
+    },
+    {
+      "account_id": "node3.guildnet",
+      "public_key": "ed25519:8FoCPuuc2eFvPhWTnVyvTA8A41viPChq6LtChnqZipWD",
+      "amount": "50000000011875276807113550000"
+    }
+  ],
+  "transaction_validity_period": 86400,
+  "max_inflation_rate": [
+    1,
+    20
+  ],
+  "total_supply": "999999999999999989047759646191156",
+  "num_blocks_per_year": 3650000,
+  "protocol_treasury_account": "treasury.guildnet",
+  "fishermen_threshold": "340282366920938463463374607431768211455",
+  "records": [
+    {
+      "Account": {
+        "account_id": "contributors.guildnet",
+        "account": {
+          "amount": "418000048999999559855198848600000",
+          "locked": "0",
+          "code_hash": "11111111111111111111111111111111",
+          "storage_usage": 182
+        }
+      }
+    },
+    {
+      "Account": {
+        "account_id": "foundation.guildnet",
+        "account": {
+          "amount": "581789980999953126466472697200000",
+          "locked": "0",
+          "code_hash": "11111111111111111111111111111111",
+          "storage_usage": 182
+        }
+      }
+    },
+    {
+      "Account": {
+        "account_id": "guildnet",
+        "account": {
+          "amount": "9949999999812571100000000000",
+          "locked": "0",
+          "code_hash": "11111111111111111111111111111111",
+          "storage_usage": 182
+        }
+      }
+    },
+    {
+      "Account": {
+        "account_id": "node0.guildnet",
+        "account": {
+          "amount": "0",
+          "locked": "50000000011865419790795122041",
+          "code_hash": "11111111111111111111111111111111",
+          "storage_usage": 182
+        }
+      }
+    },
+    {
+      "Account": {
+        "account_id": "node1.guildnet",
+        "account": {
+          "amount": "0",
+          "locked": "50000000011875276807113550000",
+          "code_hash": "11111111111111111111111111111111",
+          "storage_usage": 182
+        }
+      }
+    },
+    {
+      "Account": {
+        "account_id": "node2.guildnet",
+        "account": {
+          "amount": "0",
+          "locked": "50000000011874181583078169115",
+          "code_hash": "11111111111111111111111111111111",
+          "storage_usage": 182
+        }
+      }
+    },
+    {
+      "Account": {
+        "account_id": "node3.guildnet",
+        "account": {
+          "amount": "0",
+          "locked": "50000000011875276807113550000",
+          "code_hash": "11111111111111111111111111111111",
+          "storage_usage": 182
+        }
+      }
+    },
+    {
+      "Account": {
+        "account_id": "registrar",
+        "account": {
+          "amount": "10000000000000000000000000",
+          "locked": "0",
+          "code_hash": "11111111111111111111111111111111",
+          "storage_usage": 182
+        }
+      }
+    },
+    {
+      "Account": {
+        "account_id": "treasury.guildnet",
+        "account": {
+          "amount": "10000000000000000000000000",
+          "locked": "0",
+          "code_hash": "11111111111111111111111111111111",
+          "storage_usage": 182
+        }
+      }
+    },
+    {
+      "AccessKey": {
+        "account_id": "contributors.guildnet",
+        "public_key": "ed25519:GLXSjFg5WN8iZ75c3DdE3fNgqyPC5jgVBG131mkxMfnJ",
+        "access_key": {
+          "nonce": 0,
+          "permission": "FullAccess"
+        }
+      }
+    },
+    {
+      "AccessKey": {
+        "account_id": "foundation.guildnet",
+        "public_key": "ed25519:46fAuMHeURhQFWxhdnCgS8nrwh2FcC9k4E7ErMx2Tat1",
+        "access_key": {
+          "nonce": 0,
+          "permission": "FullAccess"
+        }
+      }
+    },
+    {
+      "AccessKey": {
+        "account_id": "guildnet",
+        "public_key": "ed25519:74r2tB2V5ZukEaXVzvdbYMm9C3CXMibYDv7QbpSGW4wD",
+        "access_key": {
+          "nonce": 1,
+          "permission": "FullAccess"
+        }
+      }
+    },
+    {
+      "AccessKey": {
+        "account_id": "node0.guildnet",
+        "public_key": "ed25519:FKLR9zWTFZ7yazX74h4AqgmxDDhgr1cmaSky999keGsV",
+        "access_key": {
+          "nonce": 0,
+          "permission": "FullAccess"
+        }
+      }
+    },
+    {
+      "AccessKey": {
+        "account_id": "node1.guildnet",
+        "public_key": "ed25519:A1bepj5HcNtLjgsVJKctpZYktFH43JnLq9dzua1Mrkpr",
+        "access_key": {
+          "nonce": 0,
+          "permission": "FullAccess"
+        }
+      }
+    },
+    {
+      "AccessKey": {
+        "account_id": "node2.guildnet",
+        "public_key": "ed25519:FEELw1gBofAEZQTu9LfErqrZUPkZj7T3LaZf3cnUvJ38",
+        "access_key": {
+          "nonce": 0,
+          "permission": "FullAccess"
+        }
+      }
+    },
+    {
+      "AccessKey": {
+        "account_id": "node3.guildnet",
+        "public_key": "ed25519:8FoCPuuc2eFvPhWTnVyvTA8A41viPChq6LtChnqZipWD",
+        "access_key": {
+          "nonce": 0,
+          "permission": "FullAccess"
+        }
+      }
+    },
+    {
+      "AccessKey": {
+        "account_id": "registrar",
+        "public_key": "ed25519:9DusLNJXV78h4T42wMBgu1mmmxACri9PxPkHQqpXYQuC",
+        "access_key": {
+          "nonce": 0,
+          "permission": "FullAccess"
+        }
+      }
+    },
+    {
+      "AccessKey": {
+        "account_id": "treasury.guildnet",
+        "public_key": "ed25519:Aq5vWJveZpDppbEaVnePRcjioCkPJP4K3KfjHDEyUvQ4",
+        "access_key": {
+          "nonce": 0,
+          "permission": "FullAccess"
+        }
+      }
+    }
+  ],
+  "protocol_reward_rate": [
+    1,
+    10
+  ],
+  "online_max_threshold": [
+    99,
+    100
+  ],
+  "online_min_threshold": [
+    90,
+    100
+  ]
+}
