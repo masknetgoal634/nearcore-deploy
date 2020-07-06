@@ -6,7 +6,7 @@
   "genesis_height": 0,
   "num_block_producer_seats": 100,
   "num_block_producer_seats_per_shard": [
-    50,50,50
+    100
   ],
   "avg_hidden_validator_seats_per_shard": [
     0
@@ -17,7 +17,7 @@
     5
   ],
   "protocol_upgrade_num_epochs": 2,
-  "epoch_length": 7000,
+  "epoch_length": 5000,
   "gas_limit": 1000000000000000,
   "min_gas_price": "100000",
   "max_gas_price": "10000000000000000000000",
