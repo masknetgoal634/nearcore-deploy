@@ -43,7 +43,7 @@ Global environment variables:
 env:
   DOCKER_BUILDKIT: 1 
 ```
-In our workflow we we have one job:
+In our workflow we have one job:
 ```
 jobs:
   build:
