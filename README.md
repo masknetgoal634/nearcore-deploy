@@ -146,7 +146,7 @@ sudo docker run -d \
     -v /var/run/docker.sock:/var/run/docker.sock \
     containrrr/watchtower
 ```
-Now, Watchtower will start monitoring `nearcore:beta` container. When the workflow push the a image to Docker Hub, Watchtower, will detect that a new image is available(about 5-6 minutes). It will gracefully stop the container and start the container using the new image.
+Now, Watchtower will start monitoring `nearcore:beta` container. When the workflow push an image to Docker Hub, Watchtower, will detect that a new image is available(about 5-6 minutes). It will gracefully stop the container and start the container using the new image.
 
 ## Conclusion
 
