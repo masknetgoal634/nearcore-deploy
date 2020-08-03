@@ -89,7 +89,7 @@ The logic of this step is to save the latest github tag to a docker hub repo as 
 
 Step 4: **Install Rust** - an action which install Rust.
 
-Step 5: **Clone NEARCore** - an action which clone [nearcore](https://github.com/nearprotocol/nearcore) with a specific tag.
+Step 5: **Clone NEARCore** - an action which clone [nearcore](https://github.com/nearprotocol/nearcore) with a tag from step 1.
 
 Step 6: **Cargo Test** - execute tests of a nearcore packages.
 
