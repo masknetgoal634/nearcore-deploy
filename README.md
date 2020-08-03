@@ -150,6 +150,8 @@ Now, Watchtower will start monitoring `nearcore:beta` container. When the workfl
 
 ## Conclusion
 
+A big plus from using workflows is not only free automation, but also saving the entire history of deployments.
+
 Hopefully this guide along with the workflow will make it easier for you to use Github Actions to build and deploy a new releases of [NEARCore](https://github.com/nearprotocol/nearcore).
 
->To use this workflow just fork the repository and [set up secret variables](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets): `DOCKER_IMAGE_NAME`, `DOCKER_USERNAME` and `DOCKER_PASSWORD`
+>To use this workflow just fork the repository (or create your own public/private) and [set up secret variables](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets): `DOCKER_IMAGE_NAME`, `DOCKER_USERNAME` and `DOCKER_PASSWORD`
