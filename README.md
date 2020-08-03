@@ -111,7 +111,7 @@ nearup stop
 ```
 >In the future if you will not use docker, you can use nearup again without any problems. 
 
-After the first run of our workflow a new docker images(`dockerusername/nearcore:beta` and `dockerusername/nearcore:rc`) should be awailable and we can run the near node with the following command:
+After the first run of our workflow a new docker images(`dockerusername/nearcore:beta` and `dockerusername/nearcore:rc`) should be available and we can run the near node with the following command:
 ```
 sudo docker run -dti \
      --restart always \
