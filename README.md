@@ -21,7 +21,7 @@ GitHub Actions is free for all open-source projects, and private repositories ge
 
 ## CI/CD Workflow
 
->The workflow will create a two docker images with tags: `dockerusername/nearcore:beta`(betanet) and `dockerusername/nearcore:rc`(testnet)
+>The workflow will create two docker images with tags: `dockerusername/nearcore:beta`(betanet) and `dockerusername/nearcore:rc`(testnet)
 
 >If you don't have a Docker ID. Go to the Docker Hub and [create an account](https://docs.docker.com/docker-hub/). 
 
