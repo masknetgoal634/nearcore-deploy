@@ -29,7 +29,7 @@ GitHub Actions is free for all open-source projects, and private repositories ge
 
 Let get started to dive deep into our CI/CD workflow.
 
-In the repository you will see our workflow `.github/workflows/cicd.yml`
+In the repository you will see our workflow `.github/workflows/main.yml`
 
 Our workflow will trigger by schedule event (trigger every 10 minutes):
 ```
