@@ -1,4 +1,4 @@
-![CICD](https://github.com/inyourarms/near-voting-example/workflows/CICD/badge.svg)
+![CICD](https://github.com/masknetgoal634/nearcore-deploy/workflows/CICD/badge.svg)
 
 # A Fully Automated NEARCore Docker Deployment using GitHub Actions and Watchtower
 
