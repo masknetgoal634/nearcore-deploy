@@ -13,14 +13,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release-name: ["rc", "beta"]
+        release-name: ["rc", "beta", "-"]
     steps:
       - uses: actions/checkout@v2
       - name: Get Github Tag
         env: 
           RELEASE_NAME: ${{ matrix.release-name }}
         run: |
-          echo $(curl -s https://api.github.com/repos/nearprotocol/nearcore/releases | jq -c -r --arg RELEASE_NAME "$RELEASE_NAME" 'map(select(.tag_name | contains($RELEASE_NAME)))[0].tag_name') > github-tag.txt
+          echo $(curl -s https://api.github.com/repos/nearprotocol/nearcore/releases | jq -c -r --arg RELEASE_NAME "$RELEASE_NAME" 'map(select(.tag_name | contains($RELEASE_NAME) | not))[0].tag_name') > github-tag.txt
 
       - name: Get Docker Hub Tags   
         if: ${{ success() }}
