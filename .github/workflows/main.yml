@@ -21,13 +21,12 @@ jobs:
           RELEASE_NAME: ${{ matrix.release-name }}
         run: |
           regex=""
-
           if [ "$RELEASE_NAME" == "mainnet" ]; then 
             regex="[0-9]+.[0-9]+.[0-9]+$"
           elif [ "$RELEASE_NAME" == "testnet" ]; then
             regex="[0-9]+.[0-9]+.[0-9]+-rc+"
           elif [ "$RELEASE_NAME" == "betanet" ]; then
-	          regex="[0-9]+.[0-9]+.[0-9]+-beta+"
+            regex="[0-9]+.[0-9]+.[0-9]+-beta+" 
           fi
           echo $(curl -s https://api.github.com/repos/nearprotocol/nearcore/releases | jq -c -r --arg regex "$regex" 'map(select(.tag_name | test($regex)))[0].tag_name') > github-tag.txt
 
