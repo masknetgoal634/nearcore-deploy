@@ -13,14 +13,23 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        release-name: ["[0-9]+.[0-9]+.[0-9]+$", "[0-9]+.[0-9]+.[0-9]+-rc+", "[0-9]+.[0-9]+.[0-9]+-beta+"]
+        release-name: ["mainnet", "testnet", "betanet"]
     steps:
       - uses: actions/checkout@v2
       - name: Get Github Tag
         env: 
           RELEASE_NAME: ${{ matrix.release-name }}
         run: |
-          echo $(curl -s https://api.github.com/repos/nearprotocol/nearcore/releases | jq -c -r --arg RELEASE_NAME "$RELEASE_NAME" 'map(select(.tag_name | test($RELEASE_NAME)))[0].tag_name') > github-tag.txt
+          regex=""
+
+          if [ "$RELEASE_NAME" == "mainnet" ]; then 
+            regex="[0-9]+.[0-9]+.[0-9]+$"
+          elif [ "$RELEASE_NAME" == "testnet" ]; then
+            regex="[0-9]+.[0-9]+.[0-9]+-rc+"
+          elif [ "$RELEASE_NAME" == "betanet" ]; then
+	          regex="[0-9]+.[0-9]+.[0-9]+-beta+"
+          fi
+          echo $(curl -s https://api.github.com/repos/nearprotocol/nearcore/releases | jq -c -r --arg regex "$regex" 'map(select(.tag_name | test($regex)))[0].tag_name') > github-tag.txt
 
       - name: Get Docker Hub Tags   
         if: ${{ success() }}
@@ -50,17 +59,6 @@ jobs:
               touch hello && echo "FROM scratch" > Dockerfile
               echo "ADD hello /" >> Dockerfile && echo 'CMD ["/hello"]' >> Dockerfile
           fi
-          
-          function net_from_tag {
-            t=`echo $1 | sed 's/[^a-zA-Z]//g'`
-            if [ ! -z "$t" ]; then
-              echo $t
-            else
-              echo "mainnet"
-            fi
-          }
-          net=$(net_from_tag $github_tag)
-          echo ::set-env name=RELEASE_TAG::$(echo $net)
 
       - name: Publish GitHub Tag Image to Registry
         if: ${{ success() }}
@@ -94,4 +92,4 @@ jobs:
           name: ${{ secrets.DOCKER_IMAGE_NAME }}
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          tags: ${{ env.RELEASE_TAG }}
+          tags: ${{ matrix.release-name }}
