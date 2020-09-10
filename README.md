@@ -93,7 +93,9 @@ Step 5: **Clone NEARCore** - an action which clone [nearcore](https://github.com
 
 Step 6: **Cargo Test** - execute tests of a nearcore packages.
 
-Step 7: **Publish Latest Docker Image to Registry** - will build and publish(concurrently) a docker images with `${{ matrix.release-name }}`(ex. `nearcore:beta` or `nearcore:rc`) tags.
+Step 7: **Test Neard** - execute tests of neard located in `nearcore/neard/tests`
+
+Step 8: **Publish Latest Docker Image to Registry** - will build and publish(concurrently) a docker images with `${{ matrix.release-name }}`(ex. `nearcore:beta` or `nearcore:rc`) tags.
 
 
 ## NEARCore Docker
