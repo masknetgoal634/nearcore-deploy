@@ -84,6 +84,9 @@ jobs:
       - name: Cargo Test
         run: cargo test    
 
+      - name: Test Neard
+        run: cd neard && cargo test 
+
       - name: Publish Latest Docker Image to Registry
         if: ${{ success() }}
         uses: elgohr/Publish-Docker-Github-Action@master
