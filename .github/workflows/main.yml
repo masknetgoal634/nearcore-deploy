@@ -61,7 +61,7 @@ jobs:
 
       - name: Publish GitHub Tag Image to Registry
         if: ${{ success() }}
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: ${{ secrets.DOCKER_IMAGE_NAME }}
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -89,7 +89,7 @@ jobs:
 
       - name: Publish Latest Docker Image to Registry
         if: ${{ success() }}
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: ${{ secrets.DOCKER_IMAGE_NAME }}
           username: ${{ secrets.DOCKER_USERNAME }}
